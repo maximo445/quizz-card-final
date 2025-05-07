@@ -1,5 +1,6 @@
 import { questions } from "./data";
 import Question from "./Components/Question";
+import "./App.css";
 
 function App() {
   console.log("at app");
@@ -7,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <ul>
+      <ul className="container">
         {questions.map((ques) => (
           <Question data={ques} />
         ))}

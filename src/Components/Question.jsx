@@ -7,13 +7,13 @@ function Question({ data }) {
 
   return (
     <>
-      {seen ? (
-        <li onClick={() => setSeen((s) => !s)} className="question">
-          <h1>{data.question}</h1>
+      {!seen ? (
+        <li onClick={() => setSeen((s) => !s)} className="card question">
+          <p>{data.question}</p>
         </li>
       ) : (
-        <li onClick={() => setSeen((s) => !s)} className="answer">
-          <h1>{data.answer}</h1>
+        <li onClick={() => setSeen((s) => !s)} className="card answer">
+          <p>{data.answer}</p>
         </li>
       )}
     </>
